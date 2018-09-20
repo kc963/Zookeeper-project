@@ -32,9 +32,9 @@ public class Player {
         writeMasterName(name);
         Runtime.getRuntime().addShutdownHook(new Thread(){
             public void run(){
-                System.out.println("Hooked");
+                //System.out.println("Hooked");
                 writeMasterName(name);
-                System.out.println("Exit");
+                //System.out.println("Exit");
             }
         });
     }
