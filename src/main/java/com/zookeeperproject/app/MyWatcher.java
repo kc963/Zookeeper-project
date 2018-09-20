@@ -1,25 +1,40 @@
 package com.zookeeperproject.app;
 
+import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 
-public class MyWatcher implements Watcher {
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
+public class MyWatcher implements Watcher {
+    static ZooKeeper zk;
+    static int c = 0;
     public void process(WatchedEvent watchedEvent) {
-        System.out.println(watchedEvent.getPath());
-        System.out.println(watchedEvent.getState());
-        System.out.println(watchedEvent.getType());
-        System.out.println(watchedEvent.toString());
-        System.out.println();
+        String data = "";
+        try {
+            for (byte b : zk.getData("/kchopra", new MyWatcher(), zk.exists("/kchopra", true))){
+                data += (char)b;
+            }
+        } catch (KeeperException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("\t" + c++ + " : " + data);
 
     }
 
     public static void main(String args[]) throws Exception {
-        ZooKeeper zk = new ConnectionCreator().connect("localhost");
-        for (byte b : zk.getData("/kchopra", new MyWatcher(), zk.exists("/kchopra", true))){
-            System.out.println((char)b);
+        zk = new ConnectionCreator().connect("localhost");
+        MyWatcher obj = new MyWatcher();
+        final CountDownLatch connSignal = new CountDownLatch(1);
+        try {
+            zk.getData("/kchopra", obj, zk.exists("/kchopra", true));
+            connSignal.await(Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
+        }catch(Exception e) {
+            System.out.println("Node doesn't exist");
         }
-
     }
 }
