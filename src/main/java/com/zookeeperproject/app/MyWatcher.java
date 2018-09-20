@@ -1,9 +1,7 @@
 package com.zookeeperproject.app;
 
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooKeeper;
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression;
+import org.apache.zookeeper.*;
 
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
@@ -15,6 +13,22 @@ public class MyWatcher implements Watcher {
     static String main_path = "/kchopra";
     static int N = 0;
 
+    public void initialize(String host){
+        try {
+            zk = new ConnectionCreator().connect(host);
+        } catch (Exception e) {
+            System.out.println("Couldn't connect to the Server. Exiting the program.");
+            System.exit(0);
+        }
+        try {
+            if(zk.exists(main_path, false) == null){
+                zk.create(main_path, "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred while creating the master znode. Exiting the system.");
+            System.exit(0);
+        }
+    }
 
     public void process(WatchedEvent watchedEvent) {
         //System.out.println("\t" + c++ + " : " + readNode(main_path));
@@ -25,40 +39,69 @@ public class MyWatcher implements Watcher {
     public void displayWork(String path){
         TreeMap<Integer, ArrayList<String>> map = new TreeMap<Integer, ArrayList<String>>();
         Stack<String> st = new Stack<String>();
+        ArrayList<String> names = new ArrayList<String>();
         String data = readNode(path);
-        //System.out.println("Data : " + data);
-        String[] entries = data.split("##");
-        ArrayList<String> list;
-        if(N > entries.length){
-            N = entries.length;
-        }
-        for(int i= 0; i<entries.length; i++){
-            String s = entries[i];
-            if(i==0){
-                s = s.substring(1);
-            }else if(i== entries.length-1){
-                s = s.substring(0, s.indexOf('#'));
+        if(data.length() > 1) {
+            //System.out.println("Data : " + data);
+
+            String[] entries = data.split("#");
+            ArrayList<String> list;
+
+            for (int i = 0; i < entries.length; i++) {
+                 String en[] = entries[i].split("#");
+                 for(int j=0; j<en.length; j++) {
+                     String s = en[j];
+                     //System.out.println(s);
+                     if (s.length() <= 0) {
+                         continue;
+                     }
+                     if (s.indexOf(":") == -1) {
+                         String node_path = "/" + s;
+                         try {
+                             if (zk.exists(node_path, false) != null) {
+                                 if (!names.contains(s)) {
+                                     names.add(s);
+                                 }
+                             } else {
+                                 if (names.contains(s)) {
+                                     names.remove(s);
+                                 }
+                             }
+                         } catch (Exception e) {
+                             e.printStackTrace();
+                         }
+                         continue;
+                     }
+                     //                if (i == 0) {
+                     //                    s = s.substring(1);
+                     //                } else if (i == entries.length - 1) {
+                     //                    s = s.substring(0, s.indexOf('#'));
+                     //                }
+                     //System.out.println("data: " + s);
+                     String[] words = s.split(":");
+                     String name = words[0];
+                     String score = words[1];
+                     String stack_data = name + ":" + score;
+                     st.push(stack_data);
+                     int key = Integer.parseInt(score);
+                     if (map.containsKey(key)) {
+                         list = map.get(key);
+                         list.add(name);
+                     } else {
+                         list = new ArrayList<String>();
+                         list.add(name);
+                     }
+                     map.put(key, list);
+                 }
             }
-            //System.out.println("data: " + s);
-            String[] words = s.split(":");
-            String name = words[0];
-            String score = words[1];
-            String stack_data = name + "\t\t" + score;
-            st.push(stack_data);
-            int key = Integer.parseInt(score);
-            if(map.containsKey(key)){
-                list = map.get(key);
-                list.add(name);
-            }else{
-                list = new ArrayList<String>();
-                list.add(name);
+            if (N > st.size()) {
+                N = st.size();
             }
-            map.put(key, list);
+            printHighestScores(map, names);
+            System.out.println();
+            printMostRecentScores(st, names);
+            System.out.println();
         }
-        printHighestScores(map);
-        System.out.println();
-        printMostRecentScores(st);
-        System.out.println();
     }
 
     public String readNode(String path){
@@ -74,7 +117,7 @@ public class MyWatcher implements Watcher {
         return data;
     }
 
-    public void printHighestScores(TreeMap<Integer, ArrayList<String>> map){
+    public void printHighestScores(TreeMap<Integer, ArrayList<String>> map, ArrayList<String> names){
         Stack<String> stack = new Stack<String>();
         Iterator iterator = map.entrySet().iterator();
         while(iterator.hasNext()){
@@ -82,6 +125,9 @@ public class MyWatcher implements Watcher {
             ArrayList<String> list = (ArrayList)data.getValue();
             for(String str : list){
                 String stack_data = str + "\t\t" + data.getKey();
+                if(names.contains(str)){
+                    stack_data += "  **";
+                }
                 stack.push(stack_data);
             }
         }
@@ -92,15 +138,27 @@ public class MyWatcher implements Watcher {
         }
     }
 
-    public void printMostRecentScores(Stack<String> st){
+    public void printMostRecentScores(Stack<String> st, ArrayList<String> names){
+        Stack<String> solution = new Stack<String>();
+        while(st.size() != 0){
+            String data = st.pop();
+            String name = data.split(":")[0];
+            String score = data.split(":")[1];
+            String line = name + "\t\t" + score;
+            if(names.contains(name)){
+                line += "  **";
+            }
+            solution.push(line);
+        }
         System.out.println("Most Recent Scores");
         System.out.println("------------------");
         for(int i=0; i<N; i++){
-            System.out.println(st.pop());
+            System.out.println(solution.pop());
         }
     }
 
     public static void main(String args[]) throws Exception {
+        MyWatcher obj = new MyWatcher();
         String path = "";
         try{
             path = args[1];
@@ -109,13 +167,13 @@ public class MyWatcher implements Watcher {
             System.out.println("Invalid parameter list. Exiting the program.");
             System.exit(0);
         }
+        obj.initialize(path);
         try {
             zk = new ConnectionCreator().connect(path);
         }catch(Exception e){
             System.out.println("Couldn't connect to the server. Exiting the program.");
             System.exit(0);
         }
-        MyWatcher obj = new MyWatcher();
         final CountDownLatch connSignal = new CountDownLatch(1);
         try {
             //System.out.println("running display");
