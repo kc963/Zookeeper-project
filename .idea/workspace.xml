@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd853b86-303d-4abd-a6e1-b57731b3dc1a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zookeeperproject/app/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/App.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -36,6 +35,30 @@
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#411#419#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyWatcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,6 +95,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/zookeeperproject/app/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" />
       </list>
     </option>
   </component>
@@ -183,7 +208,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MyWatcher">
+    <configuration name="MyWatcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zookeeperproject.app.MyWatcher" />
+      <module name="zookeeper-project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zookeeperproject.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Player" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zookeeperproject.app.Player" />
+      <module name="zookeeper-project" />
+      <option name="PROGRAM_PARAMETERS" value="player localhost:2181 kapil" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zookeeperproject.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zookeeperproject.app.Tester" />
       <module name="zookeeper-project" />
@@ -236,8 +284,15 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Tester" />
+      <item itemvalue="Application.Player" />
+      <item itemvalue="Application.MyWatcher" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyWatcher" />
+        <item itemvalue="Application.Player" />
         <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
@@ -252,7 +307,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537414830952</updated>
-      <workItem from="1537414834897" duration="3172000" />
+      <workItem from="1537414834897" duration="13627000" />
     </task>
     <task id="LOCAL-00001" summary="Build successful">
       <created>1537415371619</created>
@@ -261,11 +316,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537415371619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Connected Created">
+      <created>1537419512198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537419512198</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3172000" />
+    <option name="totallyTimeSpent" value="13627000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -309,7 +371,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Build successful" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build successful" />
+    <MESSAGE value="Connected Created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected Created" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -337,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -351,6 +407,33 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#411#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
