@@ -1,5 +1,3 @@
-package com.zookeeperproject.app;
-
 import org.apache.zookeeper.ZooKeeper;
 
 public class ConnectionCreator {
