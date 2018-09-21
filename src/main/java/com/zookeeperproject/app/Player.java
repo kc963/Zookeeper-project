@@ -42,7 +42,7 @@ public class Player {
     public static void writeMasterName(String name){
         try {
             String masterdata = new String(zk.getData("/kchopra", true, zk.exists("/kchopra", true)));
-            masterdata += "$" + name + "$";
+            masterdata += "@&" + name + "@&";
             zk.setData("/kchopra",masterdata.getBytes(),zk.exists("/kchopra", true).getVersion());
         }catch(Exception e){
             System.out.println("Some error occurred in posting score to the scoreboard. Exiting the program.");
@@ -74,13 +74,13 @@ public class Player {
 
     private static void postScore(String name, int score, String path){
         try {
-            System.out.println("1");
+            //System.out.println("1");
             zk.setData(path, Integer.toString(score).getBytes(), zk.exists(path, true).getVersion());
-            System.out.println("2");
+            //System.out.println("2");
             String masterdata = new String(zk.getData("/kchopra", true, zk.exists("/kchopra", true)));
-            System.out.println("3");
+            //System.out.println("3");
             masterdata += "#" + name + ":" +score + "#";
-            System.out.println("4");
+            //System.out.println("4");
             zk.setData("/kchopra",masterdata.getBytes(),zk.exists("/kchopra", true).getVersion());
         }catch(Exception e){
             System.out.println("Some error occurred in posting score to the scoreboard. Exiting the program.");

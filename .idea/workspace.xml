@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="zookeeper-project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cd853b86-303d-4abd-a6e1-b57731b3dc1a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/player.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.zookeeperproject.app.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.zookeeperproject.app.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/zookeeper-project-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state relative-caret-position="-324">
+              <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,13 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyWatcher.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyWatcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+            <state relative-caret-position="357">
+              <caret line="99" column="126" selection-start-line="99" selection-start-column="126" selection-end-line="99" selection-end-column="126" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5397#5405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +110,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/zookeeperproject/app/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" />
       </list>
     </option>
   </component>
@@ -142,6 +159,17 @@
             <path>
               <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,41 +205,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zookeeperproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zookeeper-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="zookeeperproject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,6 +221,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Player">
+  <component name="RunManager" selected="Application.MyWatcher">
     <configuration name="MyWatcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zookeeperproject.app.MyWatcher" />
       <module name="zookeeper-project" />
@@ -325,8 +321,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Player" />
         <item itemvalue="Application.MyWatcher" />
+        <item itemvalue="Application.Player" />
         <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
@@ -343,7 +339,7 @@
       <updated>1537414830952</updated>
       <workItem from="1537414834897" duration="20744000" />
       <workItem from="1537468913183" duration="10558000" />
-      <workItem from="1537482691787" duration="3581000" />
+      <workItem from="1537482691787" duration="8164000" />
     </task>
     <task id="LOCAL-00001" summary="Build successful">
       <created>1537415371619</created>
@@ -384,10 +380,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34883000" />
+    <option name="totallyTimeSpent" value="39466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -399,11 +396,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35620916" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,7 +432,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -472,6 +469,7 @@
           <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5397#5405#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,6 +507,7 @@
           <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5397#5405#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -539,25 +538,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="79" column="23" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="-324">
+          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="99" column="126" selection-start-line="99" selection-start-column="126" selection-end-line="99" selection-end-column="126" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5397#5405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>zookeeper-project:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>zookeeper-project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: io.netty:netty:3.10.6.Final</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

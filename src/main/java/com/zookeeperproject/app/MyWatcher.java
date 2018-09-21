@@ -56,6 +56,8 @@ public class MyWatcher implements Watcher {
                          continue;
                      }
                      if (s.indexOf(":") == -1) {
+                         String[] str = s.split("@&");
+                         s = str[1];
                          String node_path = "/" + s;
                          try {
                              if (zk.exists(node_path, false) != null) {
@@ -95,6 +97,7 @@ public class MyWatcher implements Watcher {
                  }
             }
             if (N > st.size()) {
+                System.out.println("There aren't " + N + " records present in the server. Resetting the size to " + st.size());
                 N = st.size();
             }
             printHighestScores(map, names);
@@ -139,7 +142,7 @@ public class MyWatcher implements Watcher {
     }
 
     public void printMostRecentScores(Stack<String> st, ArrayList<String> names){
-        Stack<String> solution = new Stack<String>();
+        Queue<String> solution = new LinkedList<String>();
         while(st.size() != 0){
             String data = st.pop();
             String name = data.split(":")[0];
@@ -148,16 +151,16 @@ public class MyWatcher implements Watcher {
             if(names.contains(name)){
                 line += "  **";
             }
-            solution.push(line);
+            solution.add(line);
         }
         System.out.println("Most Recent Scores");
         System.out.println("------------------");
         for(int i=0; i<N; i++){
-            System.out.println(solution.pop());
+            System.out.println(solution.remove());
         }
     }
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) {
         MyWatcher obj = new MyWatcher();
         String path = "";
         try{
@@ -179,11 +182,17 @@ public class MyWatcher implements Watcher {
             //System.out.println("running display");
             obj.displayWork(main_path);
             //System.out.println("Printing numbers");
+
+        }catch(Exception e) {
+            System.out.println("Node doesn't exist at present");
+            //e.printStackTrace();
+        }
+        try {
             zk.getData("/kchopra", obj, zk.exists("/kchopra", true));
             connSignal.await(Integer.MAX_VALUE, TimeUnit.MILLISECONDS);
-        }catch(Exception e) {
-            System.out.println("Node doesn't exist");
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Couldn't connect to the server. Exiting the program.");
         }
+
     }
 }
