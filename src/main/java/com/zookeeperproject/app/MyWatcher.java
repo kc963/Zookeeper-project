@@ -103,14 +103,14 @@ public class MyWatcher implements Watcher {
                          }
                          map.put(key, list);
                      }catch(Exception e){
-                         System.out.println("Caught");
+                         //System.out.println("Caught");
                      }
                  }
             }
-            if (N > st.size()) {
-                System.out.println("There aren't " + N + " records present in the server. Resetting the size to " + st.size());
-                N = st.size();
-            }
+//            if (N > st.size()) {
+//                System.out.println("There aren't " + N + " records present in the server. Resetting the size to " + st.size());
+//                N = st.size();
+//            }
             printHighestScores(map);
             System.out.println();
             printMostRecentScores(st);
@@ -148,7 +148,8 @@ public class MyWatcher implements Watcher {
         }
         System.out.println("Highest Scores");
         System.out.println("--------------");
-        for(int i=0; i<N; i++){
+        int i=0;
+        while(i<N && stack.size()!=0){
             System.out.println(stack.pop());
         }
     }
@@ -168,7 +169,8 @@ public class MyWatcher implements Watcher {
         }
         System.out.println("Most Recent Scores");
         System.out.println("------------------");
-        for(int i=0; i<N; i++){
+        int i=0;
+        while(i<N && solution.size()!=0){
             System.out.println(solution.remove());
         }
     }
