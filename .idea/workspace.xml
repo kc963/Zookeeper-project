@@ -7,25 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd853b86-303d-4abd-a6e1-b57731b3dc1a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConnectionCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MyWatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runnable jar files/myplayer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Runnable jar files/myplayer.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runnable jar files/mywatcher.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Runnable jar files/mywatcher.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/myplayer.jar" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/myplayer.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar2/mywatcher.jar" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar2/mywatcher.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/ConnectionCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Tester.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/ConnectionCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Tester.class" beforeDir="false" />
-    </list>
+    <list default="true" id="cd853b86-303d-4abd-a6e1-b57731b3dc1a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -329,7 +311,7 @@
       <updated>1537414830952</updated>
       <workItem from="1537414834897" duration="20744000" />
       <workItem from="1537468913183" duration="10558000" />
-      <workItem from="1537482691787" duration="15873000" />
+      <workItem from="1537482691787" duration="16283000" />
     </task>
     <task id="LOCAL-00001" summary="Build successful">
       <created>1537415371619</created>
@@ -370,11 +352,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47175000" />
+    <option name="totallyTimeSpent" value="47585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
