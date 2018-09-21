@@ -1,6 +1,7 @@
 package com.zookeeperproject.app;
 
 import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
@@ -34,6 +35,11 @@ public class Player {
             public void run(){
                 //System.out.println("Hooked");
                 writeMasterName(name);
+                try {
+                    zk.delete("/kchopra/"+name, zk.exists("/kchopra/"+name, false).getVersion());
+                } catch (Exception e) {
+                    System.out.println("Going offline...");
+                }
                 //System.out.println("Exit");
             }
         });

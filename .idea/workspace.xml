@@ -7,21 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd853b86-303d-4abd-a6e1-b57731b3dc1a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/player.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/player.jar" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/zookeeper_project_jar/player.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/Player$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.zookeeperproject.app.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.zookeeperproject.app.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/zookeeper-project-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zookeeperproject/app/MyWatcher.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +46,8 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+            <state relative-caret-position="317">
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +58,8 @@
       <file leaf-file-name="MyWatcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="99" column="126" selection-start-line="99" selection-start-column="126" selection-end-line="99" selection-end-column="126" />
+            <state relative-caret-position="226">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5397#5405#0" expanded="true" />
@@ -91,6 +80,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Zook</find>
+      <find>names</find>
+      <find>node does</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -241,7 +232,7 @@
     <configuration name="MyWatcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zookeeperproject.app.MyWatcher" />
       <module name="zookeeper-project" />
-      <option name="PROGRAM_PARAMETERS" value="watcher localhost:2181 50" />
+      <option name="PROGRAM_PARAMETERS" value="watcher localhost:2181 5" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -339,7 +330,7 @@
       <updated>1537414830952</updated>
       <workItem from="1537414834897" duration="20744000" />
       <workItem from="1537468913183" duration="10558000" />
-      <workItem from="1537482691787" duration="8164000" />
+      <workItem from="1537482691787" duration="14138000" />
     </task>
     <task id="LOCAL-00001" summary="Build successful">
       <created>1537415371619</created>
@@ -380,7 +371,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39466000" />
+    <option name="totallyTimeSpent" value="45440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -432,7 +423,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java</url>
+          <line>141</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -540,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="83" column="14" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+        <state relative-caret-position="317">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -550,8 +561,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zookeeperproject/app/MyWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="99" column="126" selection-start-line="99" selection-start-column="126" selection-end-line="99" selection-end-column="126" />
+        <state relative-caret-position="226">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5397#5405#0" expanded="true" />
