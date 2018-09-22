@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Running watcher code with arguments: watcher ${@:1} ..."
+
+javac -classpath ".:zookeeper-3.4.12.jar" ConnectionCreator.java
+javac -classpath ".:zookeeper-3.4.12.jar" MyWatcher.java
+java -classpath ".:zookeeper-3.4.12.jar:log4j-1.2.17.jar:slf4j-api-1.7.25.jar:slf4j-log4j12-1.7.25.jar" MyWatcher watcher ${@:1}
